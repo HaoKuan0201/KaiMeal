@@ -2,11 +2,26 @@
 <html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/KaiMeal/images/KaiMeal.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/KaiMeal/images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="KaiMeal" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#7A1F3A" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KaiMeal · 今天吃什麼</title>
-    <script type="module" crossorigin src="/KaiMeal/assets/index-Dh9JbkE8.js"></script>
-    <link rel="stylesheet" crossorigin href="/KaiMeal/assets/index-ymWMmVO-.css">
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/KaiMeal/assets/index-C4zVqL0u.js"></script>
+    <link rel="stylesheet" crossorigin href="/KaiMeal/assets/index-d7gQpJwg.css">
   </head>
   <body>
     <div id="app"></div>
